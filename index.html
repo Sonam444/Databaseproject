@@ -13,9 +13,9 @@
 
   <script>
     document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault(); // prevent page reload
+      e.preventDefault();
 
-      fetch("https://2259-113-192-120-224.ngrok-free.app/login", {
+      fetch("https://d4b9-113-192-120-224.ngrok-free.app/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -26,9 +26,7 @@
         })
       })
       .then(response => response.text())
-      .then(data => {
-        alert("Server says: " + data);
-      })
+      .then(data => alert("Server response: " + data))
       .catch(error => {
         console.error("Fetch error:", error);
         alert("Error sending login data.");
