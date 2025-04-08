@@ -12,26 +12,26 @@
   </form>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+    <script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-      fetch("https://6c5d-218-154-196-65.ngrok-free.app/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          username: document.getElementById("username").value,
-          password: document.getElementById("password").value
-        })
-      })
-      .then(response => response.text())
-      .then(data => alert("Server response: " + data))
-      .catch(error => {
-        console.error("Fetch error:", error);
-        alert("Error sending login data.");
-      });
-    });
+  fetch("https://6c5d-218-154-196-65.ngrok-free.app/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      username: document.getElementById("username").value,
+      password: document.getElementById("password").value
+    })
+  })
+  .then(response => response.text())
+  .then(data => alert(data))
+  .catch(err => console.error("Error sending login data:", err));
+});
+</script>
+
   </script>
 </body>
 </html>
