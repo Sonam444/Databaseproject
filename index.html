@@ -11,7 +11,6 @@
     <button type="submit">Login</button>
   </form>
 
-  <script>
     <script>
 document.getElementById("loginForm").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -30,8 +29,6 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
   .then(data => alert(data))
   .catch(err => console.error("Error sending login data:", err));
 });
-</script>
-
   </script>
 </body>
 </html>
