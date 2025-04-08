@@ -15,7 +15,7 @@
 document.getElementById("loginForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  fetch("https://6c5d-218-154-196-65.ngrok-free.app/login", {
+  fetch("https://d4b9-113-192-120-224.ngrok-free.app/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -29,6 +29,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
   .then(data => alert(data))
   .catch(err => console.error("Error sending login data:", err));
 });
-  </script>
+</script>
+
 </body>
 </html>
